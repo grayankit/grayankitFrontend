@@ -1,0 +1,91 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "attributes": {
+                "Title": "Python Tutorials For Absolute Begineers",
+                "slug": "python-tutorials",
+                "Description": "This is a python tutorial and it is beginners friendly for everyone so watch and enjoy.",
+                "createdAt": "2022-05-28T03:39:21.663Z",
+                "updatedAt": "2022-05-28T03:39:23.530Z",
+                "publishedAt": "2022-05-28T03:39:23.527Z",
+                "Cover": {
+                    "data": {
+                        "id": 1,
+                        "attributes": {
+                            "name": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                            "alternativeText": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                            "caption": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                            "width": 1200,
+                            "height": 1200,
+                            "formats": {
+                                "large": {
+                                    "ext": ".png",
+                                    "url": "/uploads/large_1200px_Python_logo_notext_svg_cce9b89a81.png",
+                                    "hash": "large_1200px_Python_logo_notext_svg_cce9b89a81",
+                                    "mime": "image/png",
+                                    "name": "large_https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                                    "path": null,
+                                    "size": 162.54,
+                                    "width": 1000,
+                                    "height": 1000
+                                },
+                                "small": {
+                                    "ext": ".png",
+                                    "url": "/uploads/small_1200px_Python_logo_notext_svg_cce9b89a81.png",
+                                    "hash": "small_1200px_Python_logo_notext_svg_cce9b89a81",
+                                    "mime": "image/png",
+                                    "name": "small_https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                                    "path": null,
+                                    "size": 60.5,
+                                    "width": 500,
+                                    "height": 500
+                                },
+                                "medium": {
+                                    "ext": ".png",
+                                    "url": "/uploads/medium_1200px_Python_logo_notext_svg_cce9b89a81.png",
+                                    "hash": "medium_1200px_Python_logo_notext_svg_cce9b89a81",
+                                    "mime": "image/png",
+                                    "name": "medium_https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                                    "path": null,
+                                    "size": 101.78,
+                                    "width": 750,
+                                    "height": 750
+                                },
+                                "thumbnail": {
+                                    "ext": ".png",
+                                    "url": "/uploads/thumbnail_1200px_Python_logo_notext_svg_cce9b89a81.png",
+                                    "hash": "thumbnail_1200px_Python_logo_notext_svg_cce9b89a81",
+                                    "mime": "image/png",
+                                    "name": "thumbnail_https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+                                    "path": null,
+                                    "size": 16.21,
+                                    "width": 156,
+                                    "height": 156
+                                }
+                            },
+                            "hash": "1200px_Python_logo_notext_svg_cce9b89a81",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "size": 81.81,
+                            "url": "/uploads/1200px_Python_logo_notext_svg_cce9b89a81.png",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "createdAt": "2022-05-28T03:39:12.711Z",
+                            "updatedAt": "2022-05-28T03:39:12.711Z"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}
