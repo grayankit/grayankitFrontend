@@ -26,7 +26,7 @@ function Courses(props) {
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
             {props.data.data.map((item)=>{
               return(
-            <div className="p-10 md:w-1/3 sm:mb-0 mb-6 border-purple-700">
+            <div className="p-10 md:w-1/3 sm:mb-0 mb-6 border-purple-700" key={item.attributes.slug}>
               <div className="rounded-lg h-46 overflow-hidden">
                 <Image
                   alt="content"
