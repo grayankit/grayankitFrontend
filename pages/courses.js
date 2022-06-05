@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
+import Link from"next/link";
 
 function Courses(props) {
   return (
@@ -42,7 +43,7 @@ function Courses(props) {
               <p className="text-base leading-relaxed mt-2">
                 {item.attributes.Description}
               </p>
-              <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-purple-400 hover:text-white rounded text-base mt-5 md:mt-10">
+              <Link href={`/videos/${item.attributes.slug}`}><button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-purple-400 hover:text-white rounded text-base mt-5 md:mt-10">
                 Start Watching
                 <svg
                   fill="none"
@@ -55,7 +56,7 @@ function Courses(props) {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </button>
+              </button></Link>
             </div>)
             })}
           </div>
