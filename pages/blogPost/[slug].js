@@ -12,7 +12,7 @@ function Slug(props) {
   return (
     <div>
       <Head>
-        <title key={item.attributes.slug}>{slug} | Grayankit.me</title>
+        <title>{slug} | Grayankit.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
