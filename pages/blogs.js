@@ -15,7 +15,7 @@ const Blogs = (props) => {
           {/* From here blog card is starting */}
           {props.data.data.map((item =>{
             return (
-            <div className="py-8 flex flex-wrap md:flex-nowrap ml-20 mr-20 px-5 ">
+            <div className="py-8 flex flex-wrap md:flex-nowrap ml-20 mr-20 px-5 " key={item.attributes.slug}>
               <div className="md:flex-grow bg-white rounded-lg shadow-md px-10 py-10" key={item.attributes.slug}>
                 <p key={item.attributes.slug}>{item.attributes.createdAt}</p>
                 <h2 className="text-2xl font-medium text-gray-900 title-font mb-2" key={item.attributes.slug}>
