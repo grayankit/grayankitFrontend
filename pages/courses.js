@@ -24,26 +24,26 @@ function Courses(props) {
             </div>
           </div>
           {/* From here card is starting */} 
-          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+          <div className="flex flex-wrap sm:-m-4 -mx-4 bg-gray-200">
             {props.data.data.map((item)=>{
               return(
-            <div className="p-10 md:w-1/3 sm:mb-0 mb-6 border-purple-700" key={item.attributes.slug}>
-              <div className="rounded-lg h-46 overflow-hidden">
+            <div className="pb-3 md:w-1/4 sm:mb-0 mb-6 bg-white m-12 rounded-2xl text-center shadow-lg hover:shadow-2xl" key={item.attributes.slug}>
+              <div className="rounded-lg overflow-hidden text-center">
                 <Image
                   alt="content"
                   className="object-cover object-center h-full w-full"
                   src={item.attributes.Cover.data.attributes.name}
-                  width={175}
-                  height={150}
+                  width={280}
+                  height={285}
                 />
               </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+              <h2 className="text-xl font-medium title-font text-gray-900 mt-5 text-center p-5">
                 {item.attributes.Title}
               </h2>
-              <p className="text-base leading-relaxed mt-2">
+              <p className="text-base leading-relaxed mt-2 text-center p-5">
                 {item.attributes.Description}
               </p>
-              <Link href={`/videos/${item.attributes.slug}`}><button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-purple-400 hover:text-white rounded text-base mt-5 md:mt-10">
+              <Link href={`/videos/${item.attributes.slug}`}><button className="inline-flex items-center bg-purple-800 border-0 py-1 px-3 focus:outline-none text-white rounded-xl text-base mt-5 md:mt-10 hover:text-lg hover:shadow-2xl">
                 Start Watching
                 <svg
                   fill="none"
