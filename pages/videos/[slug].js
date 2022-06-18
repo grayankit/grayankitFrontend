@@ -11,7 +11,7 @@ function Slug() {
         <title>{slug} | Grayankit.me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="h-screen">
+      <section className="h-fit">
         <div className="md:flex lg:flex hidden flex-col float-right h-5/6 overflow-auto w-2/6 scroll-auto">
           <ul className="list-none">
             <li className="border-1 rounded-xl border-gray-400 text-lg text-gray-600 text-center m-5 p-2 hover:cursor-pointer hover:text-white hover:bg-purple-600 hover:shadow-lg hover:shadow-black hover:text-xl shadow-black shadow-md">
@@ -26,7 +26,7 @@ function Slug() {
           </ul>
         </div>
         {/* for displaying the video */}
-        <div className="border-gray-500 border-1 max-w-fitxl md:h-4/5 lg:h-4/5 overflow-hidden h-72">
+        <div className="border-gray-500 border-1 max-w-fitxl md:h-4/5 md:min-h-max lg:h-4/5 lg:min-h-max overflow-hidden h-72">
           <iframe
             src="https://www.youtube.com/embed/rmIoA9DlaK0"
             title="YouTube video player"
@@ -37,39 +37,9 @@ function Slug() {
           />
         </div>
         {/* content Navba rStarts here */}
-        <nav className="jsx-2880253090 mx-2 px-3 tabs flex sm:flex-row overflow-x-scroll lg:overflow-x-hidden">
-          <button
-            data-target="panel-1"
-            className="jsx-2880253090 tab active text-gray-600 py-2 px-2 block hover:text-purple-500 focus:outline-none border-b-2 font-medium border-purple-500"
-          >
-            Overview
-          </button>
-          <button
-            data-target="panel-2"
-            className="jsx-2880253090 tab active text-gray-600 py-2 px-2 block hover:text-purple-500 focus:outline-none  font-medium border-purple-500"
-          >
-            Q&amp;A
-          </button>
-          <button
-            data-target="panel-2"
-            className="jsx-2880253090 tab active text-gray-600 py-2 px-2 block hover:text-purple-500 focus:outline-none  font-medium border-purple-500"
-          >
-            Downloads
-          </button>
-          <button
-            data-target="panel-2"
-            className="jsx-2880253090 tab active text-gray-600 py-2 px-2 block hover:text-purple-500 focus:outline-none  font-medium border-purple-500"
-          >
-            Announcements
-          </button>
-        </nav>
-        <div className="panels">
-          <div className="panel-1">
-            <h1>hello</h1>
-          </div>
-          <div className="panel-2">
-            <h1>I am pannel 2</h1>
-          </div>
+        <div className="mx-2 px-3 mb-40">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-center mt-4">Installing Python</h1>
+          <p className="mb-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium rem placeat possimus labore quod quas exercitationem officiis, soluta neque veniam autem voluptates id laborum dolorem quidem explicabo quis, facere fugit voluptatem. Doloribus molestias officiis natus sit soluta! Illo aliquid soluta exercitationem! Numquam et fugit eaque quia eius ab dolorum corporis veritatis cupiditate reiciendis beatae autem, distinctio aperiam corrupti labore eos enim mollitia saepe magni, quis assumenda non! Alias, harum! Sapiente quas, deserunt possimus repellendus eaque nam? Necessitatibus doloremque nemo, ex non maxime illo dignissimos quibusdam quidem! Quibusdam animi vero reprehenderit sequi magnam, placeat, eveniet molestiae delectus odit, laborum accusantium quod?</p>
         </div>
       </section>
     </div>
