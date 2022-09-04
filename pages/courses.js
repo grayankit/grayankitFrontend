@@ -27,7 +27,7 @@ function Courses(props) {
           <div className="flex flex-wrap sm:-m-4 -mx-4 bg-gray-200">
             {props.data.data.map((item)=>{
               return(
-            <div className="pb-3 md:w-1/4 sm:mb-0 mb-6 bg-white m-12 rounded-2xl text-center shadow-lg hover:shadow-2xl" key={item.attributes.slug}>
+            <div className="pb-3 md:w-1/4 sm:mb-0 mb-6 bg-white m-8 rounded-2xl text-center shadow-lg hover:shadow-2xl" key={item.attributes.slug}>
               <div className="rounded-lg overflow-hidden text-center">
                 <Image
                   alt="content"
