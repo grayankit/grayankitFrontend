@@ -54,12 +54,7 @@ const Blogs = (props) => {
 };
 //Fetching the blogs
 export async function getServerSideProps() {
-  let headers = {
-    Authorization:
-      "Bearer 609cffaf58d54dcb732e212deede744a688e32bc04823f8a6c93f77f4a16778a0c18a4a1a0735d3e0e9f0af80a43e8c5d54ac445961b586a639d280d9abf8f2a5ed9d1e790141deff54ea2dbbbcac61d6993d0178c12cae7923f464ddc8b50199e22d9daa43df742b20c783720385d9c92b4d913139f54b2a054b0b917c738ef",
-  };
   let res = await fetch("http://localhost:1337/api/blogs", {
-    headers: headers,
   });
   let data = await res.json();
   // console.log(data);

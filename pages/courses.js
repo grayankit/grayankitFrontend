@@ -71,7 +71,7 @@ export async function getServerSideProps() {
   let res = await fetch("http://localhost:1337/api/videos?populate=*", {
   });
   let data = await res.json();
-  //console.log(data);
+  console.log(data);
 
   return {
     props: { data: data },
