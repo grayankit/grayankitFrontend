@@ -7,10 +7,10 @@ function Navbar() {
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center border-b border-1 border-gray-300 top-0 sticky">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <Image src={"/NAV.png"} width="50" height={50} />
+          <Image src={"/NAV.png"} width="50" height={50} alt="logo" />
           <Link href="/">
             <span className="ml-3 text-xl hover:cursor-pointer">
-              Grayankit.me
+              Grayankit.codes
             </span>
           </Link>
         </a>

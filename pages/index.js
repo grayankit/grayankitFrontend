@@ -7,14 +7,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Grayankit.com - The atempt to live in Virtual world</title>
+        <title>Grayankit.codes - The atempt to live in Virtual world</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-              Welcome to <span className="text-purple-700">Grayankit.com</span>
+              Welcome to <span className="text-purple-700">Grayankit.codes</span>
             </h1>
             <p className="mb-8 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -55,10 +55,12 @@ export default function Home() {
           <div className="flex flex-wrap -m-4">
             <div className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img
+                <Image
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://dummyimage.com/720x400"
                   alt="blog"
+                  height={720}
+                  width={400}
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -93,10 +95,12 @@ export default function Home() {
             </div>
             <div className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img
+              <Image
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="https://dummyimage.com/721x401"
+                  src="https://dummyimage.com/720x400"
                   alt="blog"
+                  height={720}
+                  width={400}
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -131,10 +135,12 @@ export default function Home() {
             </div>
             <div className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img
+              <Image
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="https://dummyimage.com/722x402"
+                  src="https://dummyimage.com/720x400"
                   alt="blog"
+                  height={720}
+                  width={400}
                 />
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">

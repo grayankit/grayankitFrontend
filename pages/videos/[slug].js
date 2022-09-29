@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Secnav from "../../components/secnav";
 
 function Slug(props) {
 //dangerously setting inner html
@@ -18,7 +19,7 @@ function Slug(props) {
 {/* Mapping Data inside the page */}
       {props.data.data.map((item) => {
         return (
-        <section className="h-fit mt-7">
+        <section className="h-fit mt-7" key={item.attributes.slug}>
           <div className="md:flex lg:flex hidden flex-col float-right h-5/6 overflow-auto w-2/6 scroll-auto">
             <ul className="list-none">
               <li className="border-1 rounded-xl border-gray-400 text-lg text-gray-600 text-center m-5 p-2 hover:cursor-pointer hover:text-white hover:bg-purple-600 hover:shadow-lg hover:shadow-black hover:text-xl shadow-black shadow-md">
@@ -45,12 +46,7 @@ function Slug(props) {
           </div>
           {/* content Starts here */}
           <div className="mx-2 px-3 mb-40 mt-15">
-          <nav className="mx-2 px-3 tabs flex sm:flex-row overflow-x-scroll lg:overflow-x-hidden">
-          <button className="text-gray-600 py-2 px-2 block hover:text-purple-700 focus:outline-none active:border-b  font-medium border-purple-700">Overview</button>
-          <button className="text-gray-600 py-2 px-2 block hover:text-purple-700 focus:outline-none active:border-b  font-medium border-purple-700">	Q&amp;A</button>
-          <button className="text-gray-600 py-2 px-2 block hover:text-purple-700 focus:outline-none active:border-b  font-medium border-purple-700">Downloads</button>
-          <button className="text-gray-600 py-2 px-2 block hover:text-purple-700 focus:outline-none active:border-b font-medium border-purple-700">Announcements</button> 
-          </nav>
+            <Secnav />
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-center mt-4">{item.attributes.videoTItile}</h1>
             <p className="mb-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium rem placeat possimus labore quod quas exercitationem officiis, soluta neque veniam autem voluptates id laborum dolorem quidem explicabo quis, facere fugit voluptatem. Doloribus molestias officiis natus sit soluta! Illo aliquid soluta exercitationem! Numquam et fugit eaque quia eius ab dolorum corporis veritatis cupiditate reiciendis beatae autem, distinctio aperiam corrupti labore eos enim mollitia saepe magni, quis assumenda non! Alias, harum! Sapiente quas, deserunt possimus repellendus eaque nam? Necessitatibus doloremque nemo, ex non maxime illo dignissimos quibusdam quidem! Quibusdam animi vero reprehenderit sequi magnam, placeat, eveniet molestiae delectus odit, laborum accusantium quod?</p>
           </div>

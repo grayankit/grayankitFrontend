@@ -24,7 +24,7 @@ function Courses(props) {
             </div>
           </div>
           {/* From here card is starting */} 
-          <div className="flex flex-wrap sm:-m-4 -mx-4 bg-gray-200">
+          <div className="flex flex-wrap sm:-m-4 -mx-4 bg-gray-200 mb-6">
             {/* //console.log(props.data) */}
             {props.data.data.map((item)=>{
               return(
