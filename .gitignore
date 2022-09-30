@@ -30,3 +30,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+# Microsoft Edge dev tools
+launch.json
