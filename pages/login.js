@@ -1,36 +1,46 @@
 import React from 'react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState} from 'react'
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import { setCookie } from 'nookies'
 import 'react-toastify/dist/ReactToastify.css';
+import Router, { useRouter } from 'next/router';
+
+
 function Login() {
     const [email, setemail] = useState("")
     const [passwd, setpasswd] = useState("")
-
+    const router = useRouter()
     async function handleLogin(e){
         e.preventDefault()
-        const loginInfo = {
-            identifier: email,
-            password: passwd
+        if(email != ""){
+            const loginInfo = {
+                identifier: email,
+                password: passwd
+            }
+            const login =await fetch("http://localhost:1337/api/auth/local",{
+                method:"POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(loginInfo)
+                })
+                const loginResponse = await login.json();
+                console.log(loginResponse)
+                setCookie(null, 'jwt', loginResponse.jwt , {
+                    path: '/',
+                })
+                setemail("")
+                setpasswd("")
+                toast('Logged In', { hideProgressBar: false, autoClose: 2000, type: 'success' })
+                toast('Redirecting...', { hideProgressBar: false, autoClose: 1000, type: 'warning' })
+                router.push('/')
         }
-        const login =await fetch("http://localhost:1337/api/auth/local",{
-            method:"POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(loginInfo)
-            })
-            const loginResponse = await login.json();
-            console.log(loginResponse)
-            setCookie(null, 'jwt', loginResponse.jwt , {
-                path: '/',
-            })
-            setemail("")
-            setpasswd("")
-            toast('Logged In', { hideProgressBar: false, autoClose: 2000, type: 'success' })
+        else{
+            toast('Enter Email', { hideProgressBar: false, autoClose: 2000, type: 'error' })
+        }
     }
   return (
     // <!-- component -->
@@ -54,7 +64,7 @@ function Login() {
                 <form className="mt-4">
                 <div className="mb-3">
                     <label className="mb-2 block text-xs font-semibold">Email</label>
-                    <input type="email" placeholder="Enter your Email" className="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500"
+                    <input type="email" placeholder="Enter your Email or Username" className="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500"
                     value={email}
                     onChange={e => setemail(e.target.value) }
                     />

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from 'next/link';
 
 function Register() {
     //use state declaration of all variables for form
@@ -170,12 +171,13 @@ function Register() {
 								</a>
 							</div>
 							<div className="text-center">
+								<Link href="/login">
 								<a
 									className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-									href="./index.html"
 								>
 									Already have an account? Login!
 								</a>
+								</Link>
 							</div>
 						</form>
 					</div>
