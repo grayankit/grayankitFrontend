@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { useState} from 'react'
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
-import { setCookie } from 'nookies'
 import 'react-toastify/dist/ReactToastify.css';
 import Router, { useRouter } from 'next/router';
 
@@ -15,28 +14,34 @@ function Login() {
     async function handleLogin(e){
         e.preventDefault()
         if(email != ""){
-            const loginInfo = {
-                identifier: email,
-                password: passwd
+            if(passwd != ""){
+                const loginInfo = {
+                    identifier: email,
+                    password: passwd
+                }
+                const login =await fetch("http://localhost:1337/api/auth/local",{
+                    method:"POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(loginInfo)
+                    })
+                    const loginResponse = await login.json();
+                    console.log(loginResponse)
+                    localStorage.setItem("user",email)
+                    setemail("")
+                    setpasswd("")
+                    toast('Logged In', { hideProgressBar: false, autoClose: 2000, type: 'success' })
+                    localStorage.setItem("token",loginResponse.jwt)
+                    toast('Redirecting...', { hideProgressBar: false, autoClose: 1000, type: 'warning' })
+                    setTimeout(() => {
+                        router.push('/')
+                    }, 2000);
             }
-            const login =await fetch("http://localhost:1337/api/auth/local",{
-                method:"POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(loginInfo)
-                })
-                const loginResponse = await login.json();
-                console.log(loginResponse)
-                setCookie(null, 'jwt', loginResponse.jwt , {
-                    path: '/',
-                })
-                setemail("")
-                setpasswd("")
-                toast('Logged In', { hideProgressBar: false, autoClose: 2000, type: 'success' })
-                toast('Redirecting...', { hideProgressBar: false, autoClose: 1000, type: 'warning' })
-                router.push('/')
+            else{
+                toast('Enter Password', { hideProgressBar: false, autoClose: 2000, type: 'error' })
+            }
         }
         else{
             toast('Enter Email', { hideProgressBar: false, autoClose: 2000, type: 'error' })
