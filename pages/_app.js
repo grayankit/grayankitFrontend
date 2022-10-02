@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(()=>{
-    console.log("Use Effect is Running")
+    // console.log("Use Effect is Running")
     const token=localStorage.getItem('token')
     // console.log(token)
     if(token){

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Router, { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 function Login() {
@@ -97,7 +98,7 @@ function Login() {
 
                 {/* <!-- Footer --> */}
                 <div className="text-center">
-                <span className="text-xs text-gray-400 font-semibold">Don't have account?</span>
+                <span className="text-xs text-gray-400 font-semibold">Don&apos;t have account?</span>
                 <a href="#" className="text-xs font-semibold text-purple-700">Sign up</a>
                 </div>
             </div>
@@ -105,7 +106,7 @@ function Login() {
 
             {/* <!-- Login banner --> */}
             <div className="flex flex-wrap content-center justify-center rounded-r-md" style={{width: '24rem', height: '32rem'}}>
-            <img className="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://i.imgur.com/9l1A4OS.jpeg"/>
+            <Image className="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://i.imgur.com/9l1A4OS.jpeg" alt='Mrs Cat'/>
             </div>
 
         </div>
