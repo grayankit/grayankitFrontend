@@ -11,7 +11,9 @@ function Navbar(props) {
   const [username, setusername] = useState("")
   const ISSERVER = typeof window ==="undefined";
   if (!ISSERVER){
-    setusername(localStorage.getItem("user"))
+    if (localStorage.getItem("user")){
+      setusername(localStorage.getItem("user"))
+    }
   }
   // console.log(props.logout)
   return (
