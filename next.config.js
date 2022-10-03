@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images : {
-    domains:['source.unsplash.com','images.unsplash.com','upload.wikimedia.org','encrypted-tbn0.gstatic.com','dummyimage.com']
+    domains:['source.unsplash.com','images.unsplash.com','upload.wikimedia.org','encrypted-tbn0.gstatic.com','dummyimage.com','i.imgur.com','strapi.grayankit.codes']
   }
 }
