@@ -54,7 +54,7 @@ const Blogs = (props) => {
 };
 //Fetching the blogs
 export async function getServerSideProps() {
-  let res = await fetch("http://localhost:1337/api/blogs", {
+  let res = await fetch("http://strapi.grayankit.codes:1337/api/blogs", {
   });
   let data = await res.json();
   // console.log(data);

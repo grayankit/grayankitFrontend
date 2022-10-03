@@ -26,7 +26,7 @@ function Register() {
                 password:passwd,
                 cpasswd:conpasswd
             }
-            const register = await fetch("http://localhost:1337/api/auth/local/register",{
+            const register = await fetch("http://strapi.grayankit.codes:1337/api/auth/local/register",{
             method:"POST",
             headers: {
                 'Accept': 'application/json',

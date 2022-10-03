@@ -20,7 +20,7 @@ function Login() {
                     identifier: email,
                     password: passwd
                 }
-                const login =await fetch("http://localhost:1337/api/auth/local",{
+                const login =await fetch("http://strapi.grayankit.codes:1337/api/auth/local",{
                     method:"POST",
                     headers: {
                         'Accept': 'application/json',

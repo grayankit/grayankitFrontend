@@ -58,7 +58,7 @@ function Slug(props) {
 }
 export async function getServerSideProps(context) {
   let res = await fetch(
-    "http://localhost:1337/api/tickets?filters[slug]=" + context.query.slug+"-1",
+    "http://strapi.grayankit.codes:1337/api/tickets?filters[slug]=" + context.query.slug+"-1",
   );
   let data = await res.json();
   // console.log(data);
