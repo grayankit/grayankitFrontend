@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     setuser({value:null})
     toast('Logged Out', { hideProgressBar: true, autoClose: 2000, type: 'success' })
   }
-  console.log(logout)
+  // console.log(logout)
   return <>
     <Navbar key={key} user={user.value} logout={logout}/>
     <NextNProgress

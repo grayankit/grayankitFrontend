@@ -2,19 +2,11 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { FaUserAlt } from 'react-icons/fa';
-import { useState } from "react";
 
 function Navbar(props) {
   // function logout(){
   //   localStorage.removeItem('token')
   // }
-  const [username, setusername] = useState("")
-  const ISSERVER = typeof window ==="undefined";
-  if (!ISSERVER){
-    if (localStorage.getItem("user")){
-      setusername(localStorage.getItem("user"))
-    }
-  }
   // console.log(props.logout)
   return (
     <header className="text-gray-600 body-font">
@@ -44,7 +36,7 @@ function Navbar(props) {
           </Link>
           {/* {console.log(props.logout)} */}
         </nav>
-        <h3>{username}</h3>
+        {/* <h3>{username}</h3> */}
         {props.user && <button onClick={props.logout} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0 mr-10">
           Logout
          </button>}
