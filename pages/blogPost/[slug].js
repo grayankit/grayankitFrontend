@@ -33,7 +33,7 @@ function Slug(props) {
 //Fetching the courses
 export async function getServerSideProps(context) {
   let res = await fetch(
-    "http://strapi.grayankit.codes/api/blogs?filters[slug]=" + context.query.slug,
+    "https://strapi.grayankit.codes/api/blogs?filters[slug]=" + context.query.slug,
   );
   let data = await res.json();
   // console.log(data);
