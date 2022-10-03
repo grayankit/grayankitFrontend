@@ -2,12 +2,17 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { FaUserAlt } from 'react-icons/fa';
+import { useState } from "react";
 
 function Navbar(props) {
   // function logout(){
   //   localStorage.removeItem('token')
   // }
-  const username= localStorage.getItem("user")
+  const [username, setusername] = useState("")
+  const ISSERVER = typeof window ==="undefined";
+  if (!ISSERVER){
+    setusername(localStorage.getItem("user"))
+  }
   // console.log(props.logout)
   return (
     <header className="text-gray-600 body-font">

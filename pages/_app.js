@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   const [user, setuser] = useState({value:null})
   const [key, setkey] = useState(0)
   const router = useRouter()
+  const ISSERVER = typeof window ==="undefined";
 
   useEffect(()=>{
     // console.log("Use Effect is Running")
@@ -25,8 +26,10 @@ function MyApp({ Component, pageProps }) {
 
   },[router.query])
   function logout(){
-    localStorage.removeItem("token")
-    localStorage.removeItem("user")
+    if (!ISSERVER){
+      localStorage.removeItem("token")
+      localStorage.removeItem("user")
+    }
     setkey(Math.random())
     setuser({value:null})
     toast('Logged Out', { hideProgressBar: true, autoClose: 2000, type: 'success' })

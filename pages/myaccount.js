@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
+import { useState } from 'react'
 
 function Myaccount() {
+  const [token, settoken] = useState("user")
   const router = useRouter()
 
   useEffect(() => {
-    const token = localStorage.getItem('token')
+    settoken(localStorage.getItem('token'))
     if(!token){
       router.push("/")
     }
