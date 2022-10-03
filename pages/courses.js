@@ -68,7 +68,7 @@ function Courses(props) {
 }
 //Fetching the courses
 export async function getServerSideProps() {
-  let res = await fetch("http://strapi.grayankit.codes:1337/api/videos?populate=*", {
+  let res = await fetch("http://strapi.grayankit.codes/api/videos?populate=*", {
   });
   let data = await res.json();
   console.log(data);
