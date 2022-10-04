@@ -29,11 +29,12 @@ function Login() {
                     body: JSON.stringify(loginInfo)
                     })
                     const loginResponse = await login.json();
-                    console.log(loginResponse)
+                    // console.log(loginResponse)
                     localStorage.setItem("user",email)
                     setemail("")
                     setpasswd("")
                     toast('Logged In', { hideProgressBar: false, autoClose: 2000, type: 'success' })
+                    // console.log(loginResponse)
                     localStorage.setItem("token",loginResponse.jwt)
                     toast('Redirecting...', { hideProgressBar: false, autoClose: 1000, type: 'warning' })
                     setTimeout(() => {
