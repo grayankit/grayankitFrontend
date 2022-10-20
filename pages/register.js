@@ -18,6 +18,7 @@ function Register() {
     async function handleRegister(e) {
 		e.preventDefault()
         if(passwd == conpasswd){
+			console.log("hello")
             const RegisterInfo={
                 fname:firstname,
                 lname:secondname,
@@ -26,7 +27,7 @@ function Register() {
                 password:passwd,
                 cpasswd:conpasswd
             }
-            const register = await fetch("https://strapi.grayankit.codes/api/auth/local/register",{
+            const register = await fetch(`${process.env.NEXT_PUBLIC_STRAPI}/api/auth/local/register`,{
             method:"POST",
             headers: {
                 'Accept': 'application/json',
